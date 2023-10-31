@@ -39,6 +39,7 @@ repositories {
 }
 
 dependencies {
+	implementation(project(":coupon-java-core"))
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
