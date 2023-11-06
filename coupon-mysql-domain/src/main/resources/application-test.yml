@@ -9,9 +9,11 @@ server:
   shutdown: graceful
 
 spring:
+  main:
+    allow-bean-definition-overriding: true
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: create-drop
     show-sql: true
     open-in-view: false
     properties.hibernate:
@@ -27,12 +29,12 @@ spring:
       maximum-pool-size: 10
     yosep-read:
       driver-class-name: org.h2.Driver
-      jdbc-url: jdbc:h2:mem:yosep;MODE=MYSQL;DATABASE_TO_UPPER=false
+      jdbc-url: jdbc:h2:mem:yosep;Mode=MySQL;DATABASE_TO_LOWER=TRUE
       username: SA
       password:
     yosep-write:
       driver-class-name: org.h2.Driver
-      jdbc-url: jdbc:h2:mem:yosep;MODE=MYSQL;DATABASE_TO_UPPER=false
+      jdbc-url: jdbc:h2:mem:yosep;MODE=MySQL;DATABASE_TO_LOWER=TRUE
       username: SA
       password:
 
