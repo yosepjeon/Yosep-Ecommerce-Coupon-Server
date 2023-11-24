@@ -14,7 +14,7 @@ abstract class AutoIncPkEntity(
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = -1L
+    val id: Long = 0L
 ): Persistable<Long>, AuditingEntity() {
 
     override fun getId(): Long? {
@@ -22,7 +22,7 @@ abstract class AutoIncPkEntity(
     }
 
     override fun isNew(): Boolean {
-        return id != -1L
+        return id != 0L
     }
 
     override fun equals(other: Any?): Boolean {
