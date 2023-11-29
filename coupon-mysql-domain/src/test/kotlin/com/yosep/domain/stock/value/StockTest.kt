@@ -1,6 +1,7 @@
-package com.yosep.domain.stock.entity
+package com.yosep.domain.stock.value
 
-import com.yosep.domain.stock.error.InvalidStockValueException
+import com.yosep.domain.coupon.error.InvalidStockValueException
+import com.yosep.domain.coupon.value.Stock
 import org.junit.jupiter.api.Assertions.*
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
@@ -21,7 +22,7 @@ class StockTest {
     @Test
     fun 재고엔티티_프로퍼티_비교_성공() {
         // Given
-        val id = -1L
+        val id = 0L
         val total = 30L
         val remain = 29L
 
