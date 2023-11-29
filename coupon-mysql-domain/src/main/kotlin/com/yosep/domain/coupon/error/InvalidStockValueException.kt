@@ -1,4 +1,4 @@
-package com.yosep.domain.stock.error
+package com.yosep.domain.coupon.error
 
 import com.yosep.core.error.YosepErrorException
 

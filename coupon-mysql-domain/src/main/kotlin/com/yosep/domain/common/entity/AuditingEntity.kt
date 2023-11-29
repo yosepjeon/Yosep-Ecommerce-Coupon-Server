@@ -13,7 +13,7 @@ import java.time.LocalDateTime
 
 @EntityListeners(AuditingEntityListener::class)
 @MappedSuperclass
-abstract class AuditingEntity {
+open class AuditingEntity {
     @CreatedBy
     @Column(name = "insert_operator", updatable = false)
     protected var insertOperator: String? = null

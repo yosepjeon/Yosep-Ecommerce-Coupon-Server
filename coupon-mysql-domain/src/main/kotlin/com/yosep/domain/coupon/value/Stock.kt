@@ -1,21 +1,19 @@
-package com.yosep.domain.stock.entity
+package com.yosep.domain.coupon.value
 
 import com.yosep.domain.common.entity.AutoIncPkEntity
-import com.yosep.domain.stock.error.InvalidStockValueException
+import com.yosep.domain.coupon.error.InvalidStockValueException
 import jakarta.persistence.Column
-import jakarta.persistence.Entity
-import jakarta.persistence.Table
+import jakarta.persistence.Embeddable
 import org.springframework.lang.NonNull
 
-@Entity
-@Table(name = "yosep_coupon_stock")
+@Embeddable
 class Stock(
     @NonNull
-    @Column(nullable = false)
+    @Column(name = "total", nullable = false)
     var total: Long,
 
     @NonNull
-    @Column(nullable = false)
+    @Column(name = "remain", nullable = false)
     var remain: Long
 ): AutoIncPkEntity() {
 
