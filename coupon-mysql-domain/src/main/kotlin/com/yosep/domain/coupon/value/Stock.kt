@@ -1,6 +1,5 @@
 package com.yosep.domain.coupon.value
 
-import com.yosep.domain.common.entity.AutoIncPkEntity
 import com.yosep.domain.coupon.error.InvalidStockValueException
 import jakarta.persistence.Column
 import jakarta.persistence.Embeddable
@@ -15,7 +14,7 @@ class Stock(
     @NonNull
     @Column(name = "remain", nullable = false)
     var remain: Long
-): AutoIncPkEntity() {
+) {
 
     fun increaseTotal(value: Long) {
         ensureValidStock(value)

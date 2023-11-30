@@ -22,7 +22,6 @@ class StockTest {
     @Test
     fun 재고엔티티_프로퍼티_비교_성공() {
         // Given
-        val id = 0L
         val total = 30L
         val remain = 29L
 
@@ -32,7 +31,6 @@ class StockTest {
         )
 
         // When & Then
-        assertEquals(id, stock.id)
         assertEquals(total, stock.total)
         assertEquals(remain, stock.remain)
     }
